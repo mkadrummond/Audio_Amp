@@ -1,0 +1,10 @@
+"Part";"Value";"Device";"Package";"Description";"";
+"C1";"100nF";"C-EUC0805";"C0805";"CAPACITOR, European symbol";"";
+"C2";"0.033uF";"C-EUC0805";"C0805";"CAPACITOR, European symbol";"";
+"C3";"0.05uF";"C-EUC0805";"C0805";"CAPACITOR, European symbol";"";
+"C4";"250uF";"C-EUC0805";"C0805";"CAPACITOR, European symbol";"";
+"C5";"10uF";"C-EUC0805";"C0805";"CAPACITOR, European symbol";"";
+"IC1";"LM386M-1";"LM386M-1";"SO08";"Low Voltage Audio Power Amplifier";"";
+"R1";"10kO";"R-EU_R0805";"R0805";"RESISTOR, European symbol";"";
+"R2";"10O";"R-EU_R0805";"R0805";"RESISTOR, European symbol";"";
+"R3";"10kO";"TRIM_EU-CIP20C-6MM";"CIP20C-6MM";"POTENTIOMETER";"";
