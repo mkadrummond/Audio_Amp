@@ -8099,6 +8099,89 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="speaker">
+<packages>
+<package name="SMS-1308MS-2-R">
+<description>&lt;b&gt;Speaker 13 x 13mm&lt;/b&gt;, 8 Ohm, 0.7W&lt;p&gt;
+Source: pui audio inc. SMS-1308MS-2-R.pdf</description>
+<wire x1="-5.8875" y1="-6.4" x2="5.9" y2="-6.4" width="0.2032" layer="21"/>
+<wire x1="5.9" y1="-6.4" x2="5.9" y2="-3.2125" width="0.2032" layer="51"/>
+<wire x1="5.9" y1="-3.2125" x2="6.4125" y2="-2.7" width="0.2032" layer="51"/>
+<wire x1="6.4125" y1="-2.7" x2="6.4" y2="2.675" width="0.2032" layer="21"/>
+<wire x1="6.4" y1="2.675" x2="5.8875" y2="3.1875" width="0.2032" layer="51"/>
+<wire x1="5.8875" y1="3.1875" x2="5.8875" y2="5.6" width="0.2032" layer="51"/>
+<wire x1="5.8875" y1="5.6" x2="5.0875" y2="6.4" width="0.2032" layer="51"/>
+<wire x1="5.0875" y1="6.4" x2="-5.0875" y2="6.4" width="0.2032" layer="21"/>
+<wire x1="-5.0875" y1="6.4" x2="-5.8875" y2="5.6" width="0.2032" layer="51"/>
+<wire x1="-5.8875" y1="5.6" x2="-5.8875" y2="3.2125" width="0.2032" layer="51"/>
+<wire x1="-5.8875" y1="3.2125" x2="-6.4" y2="2.7" width="0.2032" layer="51"/>
+<wire x1="-6.4" y1="2.7" x2="-6.4" y2="-2.7" width="0.2032" layer="21"/>
+<wire x1="-6.4" y1="-2.7" x2="-5.8875" y2="-3.2125" width="0.2032" layer="51"/>
+<wire x1="-5.8875" y1="-3.2125" x2="-5.8875" y2="-6.4" width="0.2032" layer="51"/>
+<text x="-5.5016" y="6.6286" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3" y="-5" size="1.27" layer="27">&gt;VALUE</text>
+<smd name="+" x="-5.375" y="-4.35" dx="1.4" dy="2.2" layer="1"/>
+<smd name="-" x="5.375" y="-4.35" dx="1.4" dy="2.2" layer="1"/>
+<smd name="M2" x="5.375" y="4.35" dx="1.4" dy="2.2" layer="1"/>
+<smd name="M1" x="-5.375" y="4.35" dx="1.4" dy="2.2" layer="1"/>
+<polygon width="0.2032" layer="21">
+<vertex x="0.2" y="0.2"/>
+<vertex x="0.2" y="2" curve="-76.641477"/>
+<vertex x="2" y="0.2"/>
+</polygon>
+<polygon width="0.2032" layer="21">
+<vertex x="-0.2" y="0.2"/>
+<vertex x="-2" y="0.2" curve="-76.641477"/>
+<vertex x="-0.2" y="2"/>
+</polygon>
+<polygon width="0.2032" layer="21">
+<vertex x="-0.2" y="-0.2"/>
+<vertex x="-0.2" y="-2" curve="-76.641477"/>
+<vertex x="-2" y="-0.2"/>
+</polygon>
+<polygon width="0.2032" layer="21">
+<vertex x="0.2" y="-0.2"/>
+<vertex x="2" y="-0.2" curve="-76.641477"/>
+<vertex x="0.2" y="-2"/>
+</polygon>
+</package>
+</packages>
+<symbols>
+<symbol name="SPEAKER">
+<pin name="1" x="0" y="5.08" visible="pad" length="short" direction="pas" swaplevel="1" rot="R270"/>
+<pin name="2" x="0" y="-5.08" visible="pad" length="short" direction="pas" swaplevel="1" rot="R90"/>
+<wire x1="-1.27" y1="2.54" x2="-1.27" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="-2.54" x2="1.27" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="1.27" y2="2.54" width="0.254" layer="94"/>
+<wire x1="1.27" y1="2.54" x2="-1.27" y2="2.54" width="0.254" layer="94"/>
+<wire x1="1.27" y1="2.54" x2="3.81" y2="5.08" width="0.254" layer="94"/>
+<wire x1="3.81" y1="5.08" x2="3.81" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="3.81" y1="-5.08" x2="1.27" y2="-2.54" width="0.254" layer="94"/>
+<text x="5.08" y="1.27" size="1.778" layer="95">&gt;NAME</text>
+<text x="5.08" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="SMS-1308MS-2-R" prefix="SP">
+<description>&lt;b&gt;Speaker 13 x 13mm&lt;/b&gt;, 8 Ohm, 0.7W&lt;p&gt;
+Source: pui audio inc. SMS-1308MS-2-R.pdf</description>
+<gates>
+<gate name="A" symbol="SPEAKER" x="0" y="0" addlevel="always" swaplevel="1"/>
+</gates>
+<devices>
+<device name="" package="SMS-1308MS-2-R">
+<connects>
+<connect gate="A" pin="1" pad="+"/>
+<connect gate="A" pin="2" pad="-"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -8122,6 +8205,13 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <part name="R2" library="rcl" deviceset="R-EU_" device="R0805" value="10Ω"/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="C5" library="rcl" deviceset="C-EU" device="C0805" value="10uF"/>
+<part name="C6" library="rcl" deviceset="C-EU" device="C0805" value="100nF"/>
+<part name="GND3" library="supply1" deviceset="GND" device=""/>
+<part name="C7" library="rcl" deviceset="C-EU" device="C0805" value="10uF"/>
+<part name="C8" library="rcl" deviceset="C-EU" device="C0805" value="n.i."/>
+<part name="C9" library="rcl" deviceset="C-EU" device="C0805" value="470pF"/>
+<part name="SP1" library="speaker" deviceset="SMS-1308MS-2-R" device=""/>
+<part name="GND5" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8132,15 +8222,22 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <instance part="R1" gate="G$1" x="104.14" y="83.82"/>
 <instance part="C1" gate="G$1" x="93.98" y="40.64"/>
 <instance part="C2" gate="G$1" x="114.3" y="71.12"/>
-<instance part="C3" gate="G$1" x="114.3" y="45.72" rot="R180"/>
-<instance part="C4" gate="G$1" x="127" y="55.88" rot="R270"/>
-<instance part="GND1" gate="1" x="68.58" y="25.4"/>
+<instance part="C3" gate="G$1" x="114.3" y="48.26"/>
+<instance part="C4" gate="G$1" x="127" y="55.88" rot="R90"/>
+<instance part="GND1" gate="1" x="63.5" y="25.4"/>
 <instance part="GND2" gate="1" x="88.9" y="25.4"/>
-<instance part="P+1" gate="VCC" x="88.9" y="83.82"/>
-<instance part="R3" gate="1" x="68.58" y="58.42"/>
+<instance part="P+1" gate="VCC" x="88.9" y="106.68"/>
+<instance part="R3" gate="1" x="63.5" y="58.42"/>
 <instance part="R2" gate="G$1" x="114.3" y="35.56" rot="R90"/>
 <instance part="GND4" gate="1" x="114.3" y="25.4"/>
 <instance part="C5" gate="G$1" x="96.52" y="71.12"/>
+<instance part="C6" gate="G$1" x="78.74" y="86.36"/>
+<instance part="GND3" gate="1" x="68.58" y="76.2"/>
+<instance part="C7" gate="G$1" x="68.58" y="86.36"/>
+<instance part="C8" gate="G$1" x="58.42" y="86.36"/>
+<instance part="C9" gate="G$1" x="71.12" y="53.34"/>
+<instance part="SP1" gate="A" x="144.78" y="40.64"/>
+<instance part="GND5" gate="1" x="144.78" y="25.4"/>
 </instances>
 <busses>
 </busses>
@@ -8148,8 +8245,12 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <net name="N$2" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="+IN"/>
-<wire x1="83.82" y1="58.42" x2="73.66" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="58.42" x2="71.12" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="R3" gate="1" pin="S"/>
+<pinref part="C9" gate="G$1" pin="1"/>
+<wire x1="71.12" y1="58.42" x2="68.58" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="55.88" x2="71.12" y2="58.42" width="0.1524" layer="91"/>
+<junction x="71.12" y="58.42"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -8176,7 +8277,30 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <segment>
 <pinref part="GND1" gate="1" pin="GND"/>
 <pinref part="R3" gate="1" pin="A"/>
-<wire x1="68.58" y1="27.94" x2="68.58" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="27.94" x2="63.5" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="C9" gate="G$1" pin="2"/>
+<wire x1="63.5" y1="45.72" x2="63.5" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="48.26" x2="71.12" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="45.72" x2="63.5" y2="45.72" width="0.1524" layer="91"/>
+<junction x="63.5" y="45.72"/>
+</segment>
+<segment>
+<pinref part="C6" gate="G$1" pin="2"/>
+<pinref part="GND3" gate="1" pin="GND"/>
+<wire x1="78.74" y1="81.28" x2="78.74" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="78.74" x2="68.58" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="C8" gate="G$1" pin="2"/>
+<wire x1="68.58" y1="78.74" x2="58.42" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="78.74" x2="58.42" y2="81.28" width="0.1524" layer="91"/>
+<junction x="68.58" y="78.74"/>
+<pinref part="C7" gate="G$1" pin="2"/>
+<wire x1="68.58" y1="78.74" x2="68.58" y2="81.28" width="0.1524" layer="91"/>
+<junction x="68.58" y="78.74"/>
+</segment>
+<segment>
+<pinref part="SP1" gate="A" pin="2"/>
+<wire x1="144.78" y1="35.56" x2="144.78" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="GND5" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -8190,14 +8314,14 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <segment>
 <pinref part="IC1" gate="G$1" pin="OUT"/>
 <wire x1="101.6" y1="55.88" x2="114.3" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="C4" gate="G$1" pin="2"/>
 <junction x="114.3" y="55.88"/>
-<pinref part="C3" gate="G$1" pin="2"/>
-<wire x1="114.3" y1="55.88" x2="121.92" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="114.3" y1="50.8" x2="114.3" y2="55.88" width="0.1524" layer="91"/>
 <junction x="114.3" y="55.88"/>
 <pinref part="C2" gate="G$1" pin="2"/>
 <wire x1="114.3" y1="55.88" x2="114.3" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="C3" gate="G$1" pin="1"/>
+<wire x1="114.3" y1="55.88" x2="114.3" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="C4" gate="G$1" pin="1"/>
+<wire x1="114.3" y1="55.88" x2="124.46" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -8220,31 +8344,31 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <wire x1="114.3" y1="73.66" x2="114.3" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$6" class="0">
-<segment>
-<pinref part="C3" gate="G$1" pin="1"/>
-<pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="114.3" y1="43.18" x2="114.3" y2="40.64" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="VCC" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="VS"/>
 <pinref part="P+1" gate="VCC" pin="VCC"/>
-<wire x1="88.9" y1="63.5" x2="88.9" y2="81.28" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$7" class="0">
-<segment>
-<pinref part="C4" gate="G$1" pin="1"/>
-<wire x1="129.54" y1="55.88" x2="134.62" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="63.5" x2="88.9" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="C6" gate="G$1" pin="1"/>
+<wire x1="88.9" y1="91.44" x2="88.9" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="91.44" x2="78.74" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="91.44" x2="78.74" y2="88.9" width="0.1524" layer="91"/>
+<junction x="88.9" y="91.44"/>
+<pinref part="C8" gate="G$1" pin="1"/>
+<wire x1="78.74" y1="91.44" x2="68.58" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="91.44" x2="58.42" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="91.44" x2="58.42" y2="88.9" width="0.1524" layer="91"/>
+<junction x="78.74" y="91.44"/>
+<pinref part="C7" gate="G$1" pin="1"/>
+<wire x1="68.58" y1="91.44" x2="68.58" y2="88.9" width="0.1524" layer="91"/>
+<junction x="68.58" y="91.44"/>
 </segment>
 </net>
 <net name="N$8" class="0">
 <segment>
 <pinref part="R3" gate="1" pin="E"/>
-<wire x1="68.58" y1="63.5" x2="68.58" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="71.12" x2="55.88" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="63.5" x2="63.5" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="71.12" x2="55.88" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$9" class="0">
@@ -8252,6 +8376,21 @@ Source: http://www.bourns.com/data/global/PDFs/3223.PDF</description>
 <pinref part="IC1" gate="G$1" pin="GAIN@2"/>
 <pinref part="C5" gate="G$1" pin="2"/>
 <wire x1="96.52" y1="60.96" x2="96.52" y2="66.04" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="C3" gate="G$1" pin="2"/>
+<pinref part="R2" gate="G$1" pin="2"/>
+<wire x1="114.3" y1="43.18" x2="114.3" y2="40.64" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<pinref part="C4" gate="G$1" pin="2"/>
+<wire x1="132.08" y1="55.88" x2="144.78" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="SP1" gate="A" pin="1"/>
+<wire x1="144.78" y1="55.88" x2="144.78" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
