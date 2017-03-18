@@ -9109,6 +9109,17 @@ For boards designed to be plugged directly into a USB slot. If possible, ensure 
 <sheets>
 <sheet>
 <plain>
+<text x="137.16" y="58.42" size="1.778" layer="97">C4: DC blocking cap. It needs to be low 
+impedance compared to the speaker at 
+the lowest frequency of interest. A 250uF
+capacitor has 8 ohms reactance at ~80Hz.
+Also try 1F.</text>
+<text x="119.38" y="30.48" size="1.778" layer="97">C3, R2: Zobel Network. 
+Neutralises the effects 
+of the driver’s voice coil 
+inductance.</text>
+<text x="88.9" y="17.78" size="1.778" layer="97">C1: Alternatively 10uF</text>
+<text x="111.76" y="86.36" size="1.778" layer="97">R1, C2: Act as an Anti-Hiss Feedback network</text>
 </plain>
 <instances>
 <instance part="IC1" gate="G$1" x="91.44" y="55.88"/>
@@ -9116,23 +9127,23 @@ For boards designed to be plugged directly into a USB slot. If possible, ensure 
 <instance part="C1" gate="G$1" x="93.98" y="40.64"/>
 <instance part="C2" gate="G$1" x="114.3" y="71.12"/>
 <instance part="C3" gate="G$1" x="114.3" y="48.26"/>
-<instance part="C4" gate="G$1" x="127" y="55.88" rot="R90"/>
+<instance part="C4" gate="G$1" x="129.54" y="55.88" rot="R90"/>
 <instance part="GND1" gate="1" x="63.5" y="25.4"/>
 <instance part="GND2" gate="1" x="88.9" y="25.4"/>
 <instance part="R3" gate="1" x="63.5" y="58.42"/>
 <instance part="R2" gate="G$1" x="114.3" y="35.56" rot="R90"/>
 <instance part="GND4" gate="1" x="114.3" y="25.4"/>
-<instance part="C5" gate="G$1" x="96.52" y="71.12"/>
+<instance part="C5" gate="G$1" x="93.98" y="73.66"/>
 <instance part="C6" gate="G$1" x="78.74" y="86.36"/>
 <instance part="GND3" gate="1" x="68.58" y="76.2"/>
 <instance part="C7" gate="G$1" x="68.58" y="86.36"/>
 <instance part="C8" gate="G$1" x="58.42" y="86.36"/>
 <instance part="C9" gate="G$1" x="71.12" y="53.34"/>
-<instance part="GND5" gate="1" x="144.78" y="25.4"/>
+<instance part="GND5" gate="1" x="149.86" y="25.4"/>
 <instance part="X1" gate="1" x="33.02" y="68.58" rot="MR0"/>
 <instance part="J1" gate="G$1" x="63.5" y="106.68" rot="MR0"/>
 <instance part="GND6" gate="1" x="71.12" y="99.06"/>
-<instance part="JP1" gate="G$1" x="154.94" y="40.64"/>
+<instance part="JP1" gate="G$1" x="162.56" y="40.64"/>
 </instances>
 <busses>
 </busses>
@@ -9197,10 +9208,10 @@ For boards designed to be plugged directly into a USB slot. If possible, ensure 
 <junction x="68.58" y="78.74"/>
 </segment>
 <segment>
-<wire x1="144.78" y1="40.64" x2="144.78" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="40.64" x2="149.86" y2="27.94" width="0.1524" layer="91"/>
 <pinref part="GND5" gate="1" pin="GND"/>
 <pinref part="JP1" gate="G$1" pin="2"/>
-<wire x1="144.78" y1="40.64" x2="152.4" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="40.64" x2="160.02" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="GND"/>
@@ -9227,18 +9238,18 @@ For boards designed to be plugged directly into a USB slot. If possible, ensure 
 <pinref part="C3" gate="G$1" pin="1"/>
 <wire x1="114.3" y1="55.88" x2="114.3" y2="50.8" width="0.1524" layer="91"/>
 <pinref part="C4" gate="G$1" pin="1"/>
-<wire x1="114.3" y1="55.88" x2="124.46" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="55.88" x2="127" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="GAIN@1"/>
-<wire x1="93.98" y1="60.96" x2="93.98" y2="83.82" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="93.98" y1="83.82" x2="96.52" y2="83.82" width="0.1524" layer="91"/>
 <pinref part="C5" gate="G$1" pin="1"/>
 <wire x1="96.52" y1="83.82" x2="99.06" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="96.52" y1="73.66" x2="96.52" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="76.2" x2="93.98" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="GAIN@2"/>
+<wire x1="96.52" y1="60.96" x2="96.52" y2="83.82" width="0.1524" layer="91"/>
 <junction x="96.52" y="83.82"/>
 </segment>
 </net>
@@ -9258,13 +9269,6 @@ For boards designed to be plugged directly into a USB slot. If possible, ensure 
 <wire x1="45.72" y1="71.12" x2="63.5" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$9" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="GAIN@2"/>
-<pinref part="C5" gate="G$1" pin="2"/>
-<wire x1="96.52" y1="60.96" x2="96.52" y2="66.04" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$6" class="0">
 <segment>
 <pinref part="C3" gate="G$1" pin="2"/>
@@ -9275,10 +9279,10 @@ For boards designed to be plugged directly into a USB slot. If possible, ensure 
 <net name="N$7" class="0">
 <segment>
 <pinref part="C4" gate="G$1" pin="2"/>
-<wire x1="132.08" y1="55.88" x2="144.78" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="55.88" x2="144.78" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="55.88" x2="149.86" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="55.88" x2="149.86" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="JP1" gate="G$1" pin="1"/>
-<wire x1="144.78" y1="43.18" x2="152.4" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="43.18" x2="160.02" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$10" class="0">
@@ -9302,9 +9306,22 @@ For boards designed to be plugged directly into a USB slot. If possible, ensure 
 <wire x1="66.04" y1="109.22" x2="88.9" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 </net>
+<net name="N$9" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="GAIN@1"/>
+<pinref part="C5" gate="G$1" pin="2"/>
+<wire x1="93.98" y1="60.96" x2="93.98" y2="68.58" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
 </schematic>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
